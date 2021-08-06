@@ -1,0 +1,190 @@
+{% include 'header.html' %}
+<br>
+<form method="post" action="/store" enctype="multipart/form-data">
+    <div class="card">
+        <div class="card-header">
+            Perfil de usuario
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="txtNombre">Ingresa tu nombre</label>
+                        <input type="text" class="form-control" name="txtNombre" id="txtNombre">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="txtNacimiento">Elige tu fecha de nacimiento</label>
+                        <input id="txtNacimiento" class="form-control" type="date" name="txtNacimiento">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="txtSignoPropio">Elige tu signo zodiacal</label>
+                        <select name="txtSignoPropio" id="txtSignoPropio" class="form-control">
+                            <option value="Aries">Aries</option>
+                            <option value="Tauro">Tauro</option>
+                            <option value="Geminis">Geminis</option>
+                            <option value="Cancer">Cancer</option>
+                            <option value="Leo">Leo</option>
+                            <option value="Virgo">Virgo</option>
+                            <option value="Libra">Libra</option>
+                            <option value="Escorpio">Escorpio</option>
+                            <option value="Sagitario">Sagitario</option>
+                            <option value="Capricornio">Capricornio</option>
+                            <option value="Acuario">Acuario</option>
+                            <option value="Piscis">Piscis</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="txtSignoCompatible">¿Cuál crees que es tu signo zodiacal compatible?</label>
+                        <select name="txtSignoCompatible" id="txtSignoCompatible" class="form-control">
+                            <option value="Aries">Aries</option>
+                            <option value="Tauro" selected>Tauro</option>
+                            <option value="Geminis">Geminis</option>
+                            <option value="Cancer">Cancer</option>
+                            <option value="Leo">Leo</option>
+                            <option value="Virgo">Virgo</option>
+                            <option value="Libra">Libra</option>
+                            <option value="Escorpio">Escorpio</option>
+                            <option value="Sagitario">Sagitario</option>
+                            <option value="Capricornio">Capricornio</option>
+                            <option value="Acuario">Acuario</option>
+                            <option value="Piscis">Piscis</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--Caracteristica 1-->
+            <b>Nota: 1=Poco, 10=Mucho</b>
+            <br>
+            <label for="txtCaracteristica1">¿Eres una persona tranquila?</label>
+            <select name="txtCaracteristica1" id="txtCaracteristica1" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <!--Caracteristica 2-->
+            <label for="txtCaracteristica2">¿Eres una persona ambiciosa?</label>
+            <select name="txtCaracteristica2" id="txtCaracteristica2" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <!--Caracteristica 3-->
+            <label for="txtCaracteristica3">¿Eres una persona de rápida acción?</label>
+            <select name="txtCaracteristica3" id="txtCaracteristica3" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br>
+            <!--Caracteristica 4-->
+            <label for="txtCaracteristica4">¿Eres una persona decidida?</label>
+            <select name="txtCaracteristica4" id="txtCaracteristica4" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br>
+            <!--Caracteristica 5-->
+            <label for="txtCaracteristica5">¿Eres una persona inquieta?</label>
+            <select name="txtCaracteristica5" id="txtCaracteristica5" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br>
+            <!--Caracteristica 6-->
+            <label for="txtCaracteristica6">¿Eres una persona entusiasta?</label>
+            <select name="txtCaracteristica6" id="txtCaracteristica6" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br>
+            <!--Caracteristica 7-->
+            <label for="txtCaracteristica7">¿Eres una persona con memoria extraordianria?</label>
+            <select name="txtCaracteristica7" id="txtCaracteristica7" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br>
+            <!--Caracteristica 8-->
+            <label for="txtCaracteristica8">¿Eres una persona emocional?</label>
+            <select name="txtCaracteristica8" id="txtCaracteristica8" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br>
+            <br>
+            <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Agregar">
+            </div>
+        </div>
+    </div>
+</form>
+{% include 'footer.html' %}

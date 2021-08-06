@@ -1,0 +1,66 @@
+{% include 'header.html' %}
+
+{% with messages = get_flashed_messages() %}
+
+{% if messages %}
+    <div class="alert alert-success" role="alert">
+        {% for message in messages %}
+            {{ message }}
+            {% if message == 'Archivo guardado' %}
+                <a href="/aplicarkmeans/{{nombre_file}}" class="btn btn-primary btn-sm float-right">Aplicar algoritmo K-means</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}
+
+{% endwith %}
+
+<form method="post" action="/storeCSV" enctype="multipart/form-data">
+    <div class="card">
+        <div class="card-header">
+            Importar CSV
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="fileCSV">Archivo separado por comas</label>
+                <input id="fileCSV" class="form-control" type="file" name="fileCSV" accept=".csv">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Agregar">
+            </div>
+        </div>
+    </div>
+</form>
+<br>
+<div class="row">
+    <div class="col-md-6">
+        <b>Consideraciones para archivo Excel</b>
+    </div>
+    <!--<div class="col-md-6">
+        <a href="/descargar_plantilla" class="btn btn-primary btn-sm float-right">Descargar plantilla</a>
+    </div>-->
+</div>
+<br>
+<ul class="list-group">
+    <li class="list-group-item">Extensión CSV (archivo delimitado por comas).</li>
+    <li class="list-group-item">Primer columna nombre del usuario; "Nombre".</li>
+    <li class="list-group-item">Valores númericos a partir de fila y columna numero dos.</li>
+    <li class="list-group-item">Valor máximo 10.</li>
+    <li class="list-group-item">Valor minimo 1.</li>
+    <li class="list-group-item">Valores enteros solamente.</li>
+    <li class="list-group-item">Los registros deben ser mayores a 15, se usan 12 clusters.</li>
+    <li class="list-group-item">Primer fila para cabeceras (titulos de columnas); debe encontrarse en una tabla.</li>
+    <li class="list-group-item">Las preguntas son; deben colocarse en las cabeceras:
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">¿Eres una persona tranquila?</li>
+            <li class="list-group-item">¿Eres una persona ambiciosa?</li>
+            <li class="list-group-item">¿Eres una persona de rápida acción?</li>
+            <li class="list-group-item">¿Eres una persona decidida?</li>
+            <li class="list-group-item">¿Eres una persona inquieta?</li>
+            <li class="list-group-item">¿Eres una persona entusiasta?</li>
+            <li class="list-group-item">¿Eres una persona con memoria extraordianria?</li>
+            <li class="list-group-item">¿Eres una persona emocional?</li>
+        </ul>
+    </li>
+</ul>
+{% include 'footer.html' %}

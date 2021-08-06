@@ -1,0 +1,35 @@
+{% include 'header.html' %}
+<b>Nota:</b>
+<br>
+<p>Como se usan doce clusters, por los signos zodiacales existentes, el numero de registros debe ser mayor a 15 para aplicar el algoritmo KMeans.</p>
+<table class="table table-light">
+    <thead class="thead-light">
+        <tr>
+            <th>Identificador</th>
+            <th>Nombre</th>
+            <th>Fecha de nacimiento</th>
+            <th>Signo zodiacal propio</th>
+            <th>Signo zodiacal compatible</th>
+            {% if rows > 15 %}
+                <th>Algoritmo K-means</th>
+            {% endif %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in data %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                {% if rows > 15 %}
+                    <td>
+                        <a class="btn btn-primary" href="/kmeans/{{row[0]}}">Aplicar algoritmo</a>
+                    </td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% include 'footer.html' %}
