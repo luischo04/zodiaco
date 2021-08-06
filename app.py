@@ -13,10 +13,10 @@ app = Flask(__name__)
 app.secret_key = "Development"
 
 mysql= MySQL()
-app.config['MYSQL_DATABASE_HOST']='localhost'
+app.config['MYSQL_DATABASE_HOST']='db4free.net'
 app.config['MYSQL_DATABASE_PORT']=3306
-app.config['MYSQL_DATABASE_USER']='root'
-app.config['MYSQL_DATABASE_PASSWORD']=''
+app.config['MYSQL_DATABASE_USER']='luischo'
+app.config['MYSQL_DATABASE_PASSWORD']='123456Lf*'
 app.config['MYSQL_DATABASE_DB']='zodiaco'
 mysql.init_app(app)
 
